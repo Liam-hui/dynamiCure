@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+$bs-body-font-family: 'Poppins';
+
+body {
+  font-family: 'Poppins', sans-serif !important;
+  // font-size: 16px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 2em;
+  letter-spacing: 0.04em;
+  overflow: hidden scroll;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+header {
+  color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 1em 10%;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    height: 1px;
+    bottom: 0;
+    background-color: white;
+  }
+
+  img {
+    height: 2.5em;
+    width: auto;
+  }
+
+  li {
+    font-weight: 400;
+    font-size: 0.87em;
+    letter-spacing: 0.02em;
+    margin-left: 2em;
+  }
+
+}
+
+footer {
+  background: linear-gradient(90deg, #050F2E 0%, #1E3064 33.85%, #7DE0D4 100%);
+  color: white;
+  padding: 4em 6em;
+
+  li {
+    margin: 2em 0;
+  }
+
+  h5 {
+    font-size: 1.375em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  img {
+    height: 3em;
+    width: auto;
+  }
+
+  .socials {
+    margin-top: 1.8em;
+
+    & > div {
+      width: 2.5em;
+      height: 2.5em;
+      background: #EAEAEA;
+      border-radius: 50%;
+      position: relative;
+      margin-right: 2em;
+      cursor: pointer;
+
+      img {
+        width: 1.5em;
+        height: 1.5em;
+        object-fit: contain;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+button {
+  color: white;
+  padding: 0.5em 2em;
+  border-radius: 0.25em; 
+  background-color: #1E3064;  
+}
+
+section {
+  position: relative;
+  width: 100%;
+  padding: 10vw 10vw; 
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 23%;
+    background-color: var(--section-color);
+    opacity: 0.2;
+  }
+
+  .row {
+    position: relative;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    float: right;
+  }
+
+  h3 {
+    font-weight: 300;
+    font-size: 1.5em;
+    letter-spacing: 0.15em;
+    color: #1E3064;
+    position: relative;
+    padding-bottom: 3em;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: var(--section-color);
+      width: 4em;
+      height: 0.25em;
+      left: 0;
+      bottom: 1em;
+    }
+  }
+}
+
+#cover {
+  position: relative;
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  & > div {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    h3 {
+      font-weight: 300;
+      font-size: 2.5em;
+      line-height: 1.4em;
+      letter-spacing: 0.1em;
+    }
+  }
+}
+
+#section1 {
+  --section-color: #EB917D;
+  &::before {
+    left: 0;
+  }
+}
+
+#section2 {
+  --section-color: #1E3064;
+  .row {
+    flex-direction: row-reverse;
+  }
+}
+
+#section3 {
+  --section-color: #83DCF9;
+  &::before {
+    left: 0;
+  }
+}
+
+#section4 {
+  --section-color: #7DE0D4;
+  .row {
+    flex-direction: row-reverse;
+  }
+}
+
+#section2-info {
+  padding-top: 0;
+  margin-top: -5vw;
+  img {
+    margin-bottom: 0.5em
+  }
+  h4 {
+    color: #050F2E;
+    font-weight: 500;
+    font-size: 1.375em;
+    line-height: 1.09em;
+    letter-spacing: 0.05em;
+  }
+}
+
+#contact {
+  h3 {
+    padding-bottom: 1em;
+    &::after {
+      content: none;
+    }
+  }
+
+  .map {
+    width: 100%;
+    height: 25vw;
+    background-color: black;
+  }
+
+  .address {
+    margin-top: 1em;
+    font-size: 0.875em;
+    line-height: 1.57em;
+    color: #757575;
+  }
+
+  .leave-message {
+    padding-left: 5%;
+
+    h4 {
+      font-weight: 500;
+      font-size: 1.125em;
+      letter-spacing: 0.05em;
+      margin: 4.5em 0 2.5em 0;
+    }
+  }
+
+  .input-wrapper {
+    position: relative;  
+    width: 100%;
+    height: 4em;
+    margin-bottom: 2.5em;
+    color: #FFF;
+    background: white;
+    background-clip: padding-box; 
+    $border: 2px;
+    border: solid $border transparent; 
+    padding: 0 1em;
+  
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      margin: -$border;
+      background: linear-gradient(90deg, #050F2E 0%, #1E3064 33.85%, #7DE0D4 100%);
+    }
+
+    input {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: transparent;
+    }
+  }
+
+
+}
